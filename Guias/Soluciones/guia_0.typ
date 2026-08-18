@@ -18,7 +18,6 @@ $P(n, k) = frac(n!,(n-k)!)$
 
 #v(0.5em)
 
-
 *G0E1:* 
 
 - Existen $2^n$ cadenas
@@ -49,4 +48,24 @@ $26^3*10^4$
 
 *G0E6:*
 
- 
+- $binom(n, 2)$ Porque es la sumatoria de 1 a n - 1.
+
+- $2^(binom(n,2))$ Se puede representar con un numero binario donde 1 es si está la arista y 0 si no.
+
+- $binom(6,3) = frac(6*5*4,3!)$ Donde el numerador son las posibles colocaciones de las aristas y el divison es porque son indistinguibles entre si las aristas.
+
+*G0E7:*
+
+- $binom(7,2) = 21$ 
+
+- $binom(n + k - 1, k)$ Pensar en reordenar un string con \* y | y que cada \* representa un espacio y las | son las agrupaciones de los elementos.
+
+- $binom(4,2)$ Ya que 3 son uno por cada factura fijos.
+
+== Derivación en una Variable
+
+#v(0.5em)
+
+*G0E8:*
+
+- Dom $= (0,1)$
