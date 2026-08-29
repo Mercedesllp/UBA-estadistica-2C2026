@@ -1,4 +1,4 @@
-#let kw(body) = text(fill: olive)[*#body*]
+#import "defs.typ": *
 #set enum(numbering: "a)")
 
 = Clase 1. Teoría de conjuntos, espacio muestral, eventos, probabilidad.
@@ -19,14 +19,17 @@ Para cualesquiera tres eventos, $A,B$ y $C$, definidos en un espacio muestral S,
 A union B = B union A,\
 A inter B = B inter A;
 $
+
 + Associativity \ $
 A union (B union C) = (A union B) union C,\
 A inter (B inter C) = (A inter B) inter C;
 $
+
 + Distributive Laws \ $ 
 A inter (B union C) = (A inter B) union (A inter C),\
 A union (B inter C) = (A union B) inter (A union C);
 $
+
 + DeMorgan's Laws \ $
 (A union B)^c = A^c inter B^c,
 (A inter B)^c = A^c union B^c.
@@ -42,7 +45,9 @@ Si $A_1, A_2, dots$ son disjuntos de a pares y $union.big_(i eq 0)^infinity A_i 
 Una colección de subconjuntos de $S$ se lo llama #kw[sigma-algebra (campo de Borel o álgebra de Borel)], denotada $cal(B)$, si satisface las siguientes propiedades:
 
 + $emptyset in cal(B)$ (el conjunto vacio es un elemento de $cal(B)$).
+
 + Si $A in cal(B)$, entonces $A^c in cal(B)$ ($cal(B)$ es cerrado para complemento).
+
 + Si $A_1, A_2, dots in cal(B)$, entonces  $union.big_(i eq 1)^infinity A_i in cal(B)$ ($cal(B)$ es cerrado para uniones numerables).
 
 *Definición 1.2.4*\ 
@@ -60,11 +65,17 @@ $
 Si $P$ es una función de probabilidad y $A$ es algun conjunto en $cal(B)$, entonces
 
 + $P(emptyset) = 0$.
+
 + $P(A) <= 1$.
+
 + $P(A^c) = 1 - P(A)$.
 
 *Teorema 1.2.9*\
 Si $P$ es una función de probabilidad y $A$ y $B$ son conjuntos en $cal(B)$, entonces
+
 + $P(B inter A^c) = P(B) - P(A inter B)$.
+
 + $P(A union B) = P(A) + P(B) - P(A inter B)$.
+
 + Si $A subset B$ entonces $P(A) <= P(B)$.
+
