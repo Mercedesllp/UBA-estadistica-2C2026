@@ -68,4 +68,29 @@ $26^3*10^4$
 
 *G0E8:*
 
+a)
+
 - Dom $= (0,1)$
+- $frac(k,theta) - frac(n-k,i- theta)$
+- $frac(k,theta^2) - frac(n-k,(i- theta)^2)$
+
+b) $theta = frac(k,n)$
+
+c) El que $ell''(theta) < 0$ significa que es concava la función. O sea el punto crítico es el máximo.
+
+*G0E9:*
+
+a) $sigma'(x) =frac(e^(-x), (1+e^(-x))^2)$
+
+b) En el cuaderno.
+
+c) 
+
+- $sigma'(0) = frac(1, 4)$
+- maximo de $y(1 - y) = frac(1, 2)$
+
+
+
+
+
+
