@@ -4,8 +4,6 @@
 = Clase 1. Teoría de conjuntos, espacio muestral, eventos, probabilidad.
 (referencias a Casella Berger 2024)
 
-#v(1em)
-
 *Definición 1.1.1* \
 El conjunto S de todos los posibles resultados de un experimento se llama #kw[espacio muestral].
 
