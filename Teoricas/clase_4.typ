@@ -3,7 +3,7 @@
 #show: rest => columns(2, rest)
 
 = Clase 4. Distribuciones discretas y continuas.
-(referencias a Casella Berger 2024)
+(referencias a Casella Berger 2024 y al resumen de distribuciones de la práctica)
 
 == Familias comunes de distribuciones discretas
 
