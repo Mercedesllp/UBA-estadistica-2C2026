@@ -49,7 +49,7 @@ Una colección de subconjuntos de $S$ se lo llama #kw[sigma-algebra (campo de Bo
 + Si $A_1, A_2, dots in cal(B)$, entonces  $union.big_(i eq 1)^infinity A_i in cal(B)$ ($cal(B)$ es cerrado para uniones numerables).
 
 *Definición 1.2.4*\ 
-Dado un espacio muestral $S$ y un campo de Borel aociado $cal(B)$, una #kw[función de probabilidad] es una función $P$ con dominio $cal(B)$que satisface los #kw[axiomas de probabilidad]:
+Dado un espacio muestral $S$ y un campo de Borel aociado $cal(B)$, una #kw[función de probabilidad] es una función $P$ con dominio $cal(B)$ que satisface los #kw[axiomas de probabilidad]:
 
 #enum(numbering: "1.")[$P(A) >= 0$ $forall A in cal(B)$.][$P(S) = 1$.][Si $A_1, A_2, dots in cal(B)$ son mutuamente exclusivos, entonces $P(union.big_(i=0)^infinity A_i) = sum_(i=1)^infinity P(A_i)$.]
 
