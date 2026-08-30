@@ -1,5 +1,6 @@
 #import "defs.typ":*
 #set enum(numbering: "a)")
+#show: rest => columns(2, rest)
 
 = Clase 4. Distribuciones discretas y continuas.
 (referencias a Casella Berger 2024)
@@ -195,21 +196,20 @@ $X tilde F_(n,m)$
 
 $f_X (x) = frac(Gamma((m+n)/2), Gamma(n/2) Gamma(m/2)) (n/m)^(n/2) x^(n/2 - 1) (1+ n/m x)^(-(m+n)/2) forces.not((0,infinity)) (x)$ 
 
-*Propiedades más usadas*
+== Propiedades más usadas
 
-#grid(
-  columns: (1fr, 1fr),
-  gutter: 20pt,
-  [
-    - $X ~ "Bi"(n, p), Y ~ "Bi"(m, p)$ independientes $=> X + Y ~ "Bi"(n + m, p)$.
-    - $X ~ P(lambda_1), Y ~ P(lambda_2)$ independientes $=> X + Y ~ P(lambda_1 + lambda_2)$.
-    - $"Bi"(n, p) approx P(lambda)$ con $lambda = n p$ cuando $p << 1$.
-    - $H(N, r, m) approx "Bi"(m, r/N)$ cuando $N$ es grande y $m << N$.
-  ],
-  [
-    - $X ~ N(mu, sigma^2) => (X - mu)/sigma ~ N(0, 1)$ (estandarización).
-    - $X ~ N(mu_1, sigma_1^2), Y ~ N(mu_2, sigma_2^2)$ independientes $=> a X + b Y + c ~ N(a mu_1 + b mu_2 + c, a^2 sigma_1^2 + b^2 sigma_2^2)$.
-    - $X ~ Gamma(alpha, lambda) => c X ~ Gamma(alpha, lambda/c)$.
-    - $Z ~ N(0, 1) => Z^2 ~ chi_1^2$.
-  ]
-)
+- $X ~ "Bi"(n, p), Y ~ "Bi"(m, p)$ independientes $=> X + Y ~ "Bi"(n + m, p)$.
+
+- $X ~ P(lambda_1), Y ~ P(lambda_2)$ independientes $=> X + Y ~ P(lambda_1 + lambda_2)$.
+
+- $"Bi"(n, p) approx P(lambda)$ con $lambda = n p$ cuando $p << 1$.
+
+- $H(N, r, m) approx "Bi"(m, r/N)$ cuando $N$ es grande y $m << N$.
+
+- $X ~ N(mu, sigma^2) => (X - mu)/sigma ~ N(0, 1)$ (estandarización).
+
+- $X ~ N(mu_1, sigma_1^2), Y ~ N(mu_2, sigma_2^2)$ independientes $=> a X + b Y + c ~ N(a mu_1 + b mu_2 + c, a^2 sigma_1^2 + b^2 sigma_2^2)$.
+
+- $X ~ Gamma(alpha, lambda) => c X ~ Gamma(alpha, lambda/c)$.
+
+- $Z ~ N(0, 1) => Z^2 ~ chi_1^2$.
