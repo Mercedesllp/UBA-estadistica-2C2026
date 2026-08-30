@@ -1,2 +1,2 @@
-#let kw(body) = text(fill: olive)[*#body*]
+#let kw(body) = text(fill: maroon)[*#body*]
 
