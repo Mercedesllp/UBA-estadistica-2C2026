@@ -91,11 +91,11 @@ $"Var"(X) = m frac(r,N) frac(N-r, N) frac(N-m, N-1)$
 == Familias comunes de distribuciones continuas
 
 *Ecuación 3.3.1*\
-#kw[Distribución uniforme] (continua).
+#kw[Distribución uniforme continua].
 
 $X tilde U[a,b]$
 
-$f(x) = frac(1, (b-a)) forces.not_[a,b] (x)$
+$f(x) = frac(1, (b-a)) bb(1)_[a,b] (x)$
 
 $E[X] = frac(a+b, 2)$
 
@@ -110,7 +110,7 @@ $X tilde N(mu, sigma^2)$
 
 $f_X (x) = frac(1, sigma sqrt(2 pi)) e^(-(x-mu)^2 \/ 2 sigma^2) ",  " sigma > 0$
 
-$E(X = mu)$
+$E[X] = mu$
 
 $"Var"(X) = sigma^2$
 
@@ -121,9 +121,9 @@ Normal estándar:  $N(0,1)$
 
 $X tilde Gamma(alpha, lambda)$
 
-$f_X (x) = frac(lambda^alpha, Gamma(alpha)) x^(alpha -1) e^(-lambda x) forces.not_((0, infinity)) (x) ",  " lambda,alpha > 0$
+$f_X (x) = frac(lambda^alpha, Gamma(alpha)) x^(alpha -1) e^(-lambda x) bb(1)_((0, infinity)) (x) ",  " lambda,alpha > 0$
 
-$E(X) = frac(sigma, lambda)$
+$E[X] = frac(sigma, lambda)$
 
 $"Var"(X) = frac(alpha,lambda^2)$
 
@@ -134,7 +134,7 @@ $Gamma(1) = 1 ", " Gamma(alpha) = (alpha -1) Gamma(alpha -1) ", " Gamma(n) = (n-
 
 $X tilde beta(a,b)$
 
-$f_X(x) = frac(Gamma(a+b), Gamma(a) Gamma(b)) x^(a-1) (1-x)^(b-1) forces.not_((0,1)) (x) ",  " a,b > 0$
+$f_X (x) = \ frac(Gamma(a+b), Gamma(a) Gamma(b)) x^(a-1) (1-x)^(b-1) bb(1)_((0,1)) (x) ",  " a,b > 0$
 
 $E[X] = frac(a, a+b)$
 
@@ -149,11 +149,11 @@ $B(a, b) =frac(Gamma(a) Gamma(b), Gamma(a+b))$
 
 $X tilde "Exp"(lambda)$
 
-$f_X (x) = lambda e^(-lambda x) forces.not_((0,infinity)) (x) ",  " lambda > 0$
+$f_X (x) = lambda e^(-lambda x) bb(1)_((0,infinity)) (x) ",  " lambda > 0$
 
-$E(X) = 1/lambda$
+$E[X] = 1/lambda$
 
-$"Var"(X) 1/(lambda^2)$
+$"Var"(X) = 1/(lambda^2)$
 
 Parametrización alternativa.
 
@@ -194,7 +194,7 @@ $"Var"(X) = 2n$
 
 $X tilde F_(n,m)$
 
-$f_X (x) = frac(Gamma((m+n)/2), Gamma(n/2) Gamma(m/2)) (n/m)^(n/2) x^(n/2 - 1) (1+ n/m x)^(-(m+n)/2) forces.not((0,infinity)) (x)$ 
+$f_X (x) =\ frac(Gamma((m+n)/2), Gamma(n/2) Gamma(m/2)) (n/m)^(n/2) x^(n/2 - 1) (1+ n/m x)^(-(m+n)/2) bb(1)((0,infinity)) (x)$ 
 
 == Propiedades más usadas
 

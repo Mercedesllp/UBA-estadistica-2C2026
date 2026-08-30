@@ -32,7 +32,7 @@ La función $F(x)$ es una fda si y solo si las siguientes condiciones se cumplen
 *Definición 1.5.7*\
 Una variable aleatoria $X$ es #kw[continua] si $F_X (x)$ es una función continua de $x$. 
 
-Una variable aleatoria $X$ es #kw[discreta] si $F_X (x)$ es una función con escalones de $x$. 
+Una variable aleatoria $X$ es #kw[discreta] si $F_X (x)$ es una función escalonada (o en escalera / step function). 
 
 *Definición 1.5.8*\
 Las variables aleatorias $X$ e $Y$ son #kw[idénticamente distribuidas] si, por cada conjunto $A in cal(B)$, $P(X in A) = P(Y in A)$
@@ -53,7 +53,7 @@ $
 *Ecuación 1.6.1*\
 Relación entre fdp y fda (variable discreta)
 $
-  F_X (x) = sum_(i=1)^x f_X(i)
+  F_X (x) = sum_(i=1)^x f_X (i)
 $
 
 *Ecuación 1.6.2*\
@@ -74,7 +74,7 @@ Una función $f_X (x)$ es fdp o fpp, de una variable aleatoria $X$ si y solo si
 
 + $f_X (x) >= 0 " " forall x$.
 
-+ $sum_x F_X (x) = 1$ (fpp) o $integral_(-infinity)^(infinity) f_X (x) \dx = 1$ (fdp)
++ $sum_x f_X (x) = 1$ (fpp) o $integral_(-infinity)^(infinity) f_X (x) \dx = 1$ (fdp)
 
 == Valor esperado
 
@@ -82,8 +82,8 @@ Una función $f_X (x)$ es fdp o fpp, de una variable aleatoria $X$ si y solo si
 El #kw[valor esperado (esperanza)] de una variable aleatoria $g(X)$, denotado por $E[g(X)]$, es 
 $
   E[g(X)] = cases(
-    integral_(-infinity)^(infinity) g(x) f_X (x) \dx & X "continua",
-    sum_(x in cal(X)) g(x) f_X (x) = sum_(x in cal(X)) g(x)P(X = x) & X "discreta",
+    integral_(-infinity)^(infinity) g(x) f_X (x) \dx & wide X "continua",
+    sum_(x in cal(X)) g(x) f_X (x) = sum_(x in cal(X)) g(x)P(X = x) & wide X "discreta",
   )
 $
 
@@ -96,7 +96,7 @@ $
 
 Valor esperado de las distancias cuadráticas con respecto al valor medio: #kw[varianza].
 $
-  g(X) = (X - E(X)^2) equiv E[(X - E(X))^2]
+  "Var"(X) = E[(X - E(X))^2]
 $
 
 *Teorema 2.2.5*\ 

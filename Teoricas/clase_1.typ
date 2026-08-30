@@ -37,7 +37,7 @@ $
 Dos eventos $A$ y $B$ son #kw[disjuntos (o mutuamente exclusivos)] si $A inter B = emptyset$. Estos eventos $A_1, A_2 , dots$ son #kw[disjuntos de a pares (o mutuamente exclusivos)] si $A_i inter A_j eq emptyset$ $forall i eq.not j$.
 
 *Definición 1.1.6*\
-Si $A_1, A_2, dots$ son disjuntos de a pares y $union.big_(i eq 0)^infinity A_i eq S$, entonces la colección $A_1, A_2, dots$ forman una #kw[partición] de $S$.
+Si $A_1, A_2, dots$ son disjuntos de a pares, $A_i eq.not emptyset$ y $union.big_(i eq 1)^infinity A_i eq S$, entonces la colección $A_1, A_2, dots$ forman una #kw[partición] de $S$.
 
 *Definición 1.2.1*\
 Una colección de subconjuntos de $S$ se lo llama #kw[sigma-algebra (campo de Borel o álgebra de Borel)], denotada $cal(B)$, si satisface las siguientes propiedades:
@@ -51,12 +51,12 @@ Una colección de subconjuntos de $S$ se lo llama #kw[sigma-algebra (campo de Bo
 *Definición 1.2.4*\ 
 Dado un espacio muestral $S$ y un campo de Borel aociado $cal(B)$, una #kw[función de probabilidad] es una función $P$ con dominio $cal(B)$ que satisface los #kw[axiomas de probabilidad]:
 
-#enum(numbering: "1.")[$P(A) >= 0$ $forall A in cal(B)$.][$P(S) = 1$.][Si $A_1, A_2, dots in cal(B)$ son mutuamente exclusivos, entonces $P(union.big_(i=0)^infinity A_i) = sum_(i=1)^infinity P(A_i)$.]
+#enum(numbering: "1.")[$P(A) >= 0$ $forall A in cal(B)$.][$P(S) = 1$.][Si $A_1, A_2, dots in cal(B)$ son mutuamente exclusivos, entonces $P(union.big_(i=1)^infinity A_i) = sum_(i=1)^infinity P(A_i)$.]
 
 *Teorema 1.2.6*\
 Sea $S = {s_1, dots, s_n}$ un conjunto finito. Sea $cal(B)$ un campo de Borel de subconjuntos de $S$. Sean $p_1, dots, p_n$ numeros no-negativos que sumen uno. Para cualquier $A in cal(B)$, se define $P(A)$ como
 $
-  P(A) =  limits(sum)_{i:s_i in A_i} p_i
+  P(A) =  limits(sum)_{i:s_i in A} p_i
 $
 
 *Teorema 1.2.8*\

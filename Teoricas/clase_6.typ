@@ -5,13 +5,13 @@
 (referencias a Casella Berger 2024)
  
 *Teorema 3.6.1*\
-#kw[Desigualdad de Chebychev]. Sea $X$ una variable aleatoria, $g(X) >= 0$. Entonces, para $r>0$:
+#kw[Desigualdad de Markov / Chebychev]. Sea $X$ una variable aleatoria y $g(X) >= 0$. Entonces, para cualquier $r>0$:
 
 $ P(g(X) >= r) <= frac(E[g(X)], r) $
 
 *Demo:*\
 
-$ E[g(X)] &= integral_(-infinity)^(infinity) g(X f_X (x)) d x\ 
+$ E[g(X)] &= integral_(-infinity)^(infinity) g(x) f_X (x) d x\ 
          &>= integral_(\{x : g(x) >= r\}) g(x) f_X (x) d x &quad &(g "es no negativa") \
          &>= r integral_(\{x : g(x) >= r\}) f_X (x) d x \
          &= r P(g(X) >= r). &quad &("definición") $
@@ -32,7 +32,7 @@ $ P((X, Y) in A) = sum_((x,y) in A) f(x, y). $
 
 El valor esperado es,
 
-$ E[g(X, Y)] = sum_((x,y) in cal(R)^2) g(x, y) f(x, y). $
+$ E[g(X, Y)] = sum_((x,y) in bb(R)^2) g(x, y) f(x, y). $
 
 *Propiedades:*\
 Sean $g_1(x,y)$ y $g_2(x,y)$ funciones y $a, b$ y $c$ constantes:
@@ -46,7 +46,7 @@ Sean $g_1(x,y)$ y $g_2(x,y)$ funciones y $a, b$ y $c$ constantes:
 *Teorema 4.1.6*\
 Sea $(X,Y)$ un vector aleatorio bivariado discreto con fpp conjunta $f_(X,Y) (x,y)$. Entonces, la #kw[función de probabilidad puntual marginal/ fpp marginal] de $X$ e $Y$, $f_X (x) = P (X = x)$ y $f_Y (y) = P (Y = y)$, son dadas por, 
 
-$ f_X (x) = sum_(y in cal(R)) f_(X,Y) (x, y) "  y  " f_Y (y) = sum_(x in cal(R)) f_(X,Y) (x, y). $
+$ f_X (x) = sum_(y in bb(R)) f_(X,Y) (x, y) "  y  " f_Y (y) = sum_(x in bb(R)) f_(X,Y) (x, y). $
 
 *Definición 4.1.10*\
 Una función $f(x,y)$ de $bb(R)^2 -> bb(R)$ se la llama #kw[función de densidad de probabilidad conjunta para un vector bidimensional continuo] $(X,Y)$ si, por cada $A subset bb(R)^2$,
@@ -75,9 +75,9 @@ $ F(x, y) = integral_(-infinity)^x integral_(-infinity)^y f(s, t) d t d s. $
 $ (partial^2 F(x, y)) / (partial x partial y) = f(x, y), $
 
 *Definición 4.2.1*\
-#kw[Función de distribución condicional para variables multidimensionales discretas]. Sea $(X,Y)$ un vector aleatorio bivariado discrto con una fdp conjunta $f(x,y)$ y fdps marginales $f_X (x)$ y $f_Y(y)$. 
+#kw[Función de distribución condicional para variables multidimensionales discretas]. Sea $(X,Y)$ un vector aleatorio bivariado discrto con una fdp conjunta $f(x,y)$ y fpps marginales $f_X (x)$ y $f_Y(y)$. 
 
-Para cualquier $x$ tal que $P(X = x) = f_X (x) > 0$, la fdp condicional de $Y$ dado que $X = x$ es la función de $y$ denotada por $f(y|x)$ definida por 
+Para cualquier $x$ tal que $P(X = x) = f_X (x) > 0$, la fpp condicional de $Y$ dado que $X = x$ es la función de $y$ denotada por $f(y|x)$ definida por 
 
 $ f(y|x) = P(Y = y | X = x) = frac(f(x, y), f_X (x)). $
 
@@ -103,9 +103,10 @@ Para cualquier $y$ tal que $f_Y (y) > 0$, la fdp condicional de $X$ dado que $Y 
 
 $ f(x|y) = frac(f(x, y), f_Y (y)). $
 
-Valor esperado condicional:
+*Valor esperado condicional:*
+- Caso discreto: $E[g(Y) | x] = sum_y g(y) f(y|x)$
 
-$ E[g(Y) | x] = sum_y g(y) f(y|x) "  y  " E[g(Y) | x] = integral_(-infinity)^(infinity) g(y) f(y|x) d y $
+- Caso continuo: $E[g(Y) | x] = integral_(-infinity)^(infinity) g(y) f(y|x) d y$
 
 *Definición 4.2.5*\
 Sea $(X, Y)$ un vector aleatorio bivariado con fdp o fpm conjunta $f(x, y)$, y fdps o fpms marginales $f_X (x)$ y $f_Y (y)$. Entonces $X$ e $Y$ se denominan #kw[variables aleatorias independientes] si, para todo $x in bb(R)$ e $y in bb(R)$,
@@ -145,6 +146,6 @@ $ E(g(X) h(Y)) &= integral_(-infinity)^(infinity) integral_(-infinity)^(infinity
                &= (E g(X)) (E h(Y)). $
 
 *Teorema 4.2.14*\
-La suma de dos normales independientes tiene distribución normal, pero su distribución no es la suma de las distribuciones.
+La suma de dos variables normales independientes es también una variable normal (sus medias y varianzas se suman).
 
 Sean $X ~ N(mu, sigma^2)$ y $Y ~ N(gamma, tau^2)$ variables aleatorias normales independientes. Entonces la variable aleatoria $Z = X + Y$ tiene una distribución $N(mu + gamma, sigma^2 + tau^2)$.

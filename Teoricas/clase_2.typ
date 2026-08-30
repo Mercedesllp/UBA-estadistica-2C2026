@@ -9,7 +9,7 @@ Si $P$ es una función de probabilidad, entonces
 
 + $P(A) = sum_(i=1)^infinity P(A inter C_i)$ para cualquier partición $C_1, C_2, dots$ #kw[probabilidad total]
 
-+ $P(union.big_(i=1)^infinity (A inter C_i)) <= P(A_i)$ para cualesquiera conjuntos $A_1, A_2, dots$ #kw[probabilidad de Boole / Boole's Inequality]
++ $P(union.big_(i=1)^infinity A_i) <= sum_(i=1)^(infinity) P(A_i)$ para cualesquiera conjuntos $A_1, A_2, dots$ #kw[probabilidad de Boole / desigualdad de Boole]
 
 *Ecuación 1.2.10*\
 La #kw[desigualdad de Bonferroni]:
