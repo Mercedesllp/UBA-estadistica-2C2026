@@ -13,6 +13,12 @@ La #kw[correlación] de $X$ e $Y$ es el número definido por
 
 $ rho_(X Y) = frac("Cov"(X,Y), sigma_X sigma_Y) $
 
+#note
+
+- *Covarianza:* Mide la variación conjunta de dos variables respecto a sus respectivas medias ($mu_X$ y $mu_Y$). Responde a la pregunta: "Cuando $X$ está por encima de su promedio, ¿$Y$ tiende a estar por encima o por debajo del suyo?".
+
+- *Correlación:* Es la covarianza estandarizada (o adimensional). Se obtiene dividiendo la covarianza por el producto de las desviaciones estándar ($sigma_X sigma_Y$).
+
 *Teorema 4.5.3*\
 #kw[Descomposición de la covarianza]. \
 Para cualesquiera variables aleatorias $X$ e $Y$.
@@ -47,8 +53,10 @@ $ "Var"(a X + b Y) = a^2 "Var" X + b^2 "Var" Y. $
 *Teorema 4.5.7*\
 #kw[Correlación y relación lineal].\
 Para cualesquiera variables aleatorias $X$ e $Y$,
+
 + $-1 <= rho_(X Y) <= 1.$
-+ $|rho_(X Y)| = 1$ #emph[si y solo si existen números] $a != 0$ #emph[y] $b$ #emph[tales que] $P(Y = a X + b) = 1$. #emph[Si] $rho_(X Y) = 1$ #emph[entonces] $a > 0$, #emph[y si] $rho_(X Y) = -1$ #emph[entonces] $a < 0$.
+
++ $|rho_(X Y)| = 1$ si y solo si existen números $a != 0$ y $b$ tales que $P(Y = a X + b) = 1$. Si $rho_(X Y) = 1$ entonces $a > 0$, y si $rho_(X Y) = -1$ entonces $a < 0$.
 
 *Definición 5.1.1*\
 Las variables aleatorias $X_1, ..., X_n$ se denominan una #kw[muestra aleatoria] 

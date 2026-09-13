@@ -67,7 +67,7 @@ Si $g(x)$ es decreciente, tenemos
 $ F_Y (y) = integral_(g^(-1)(y))^(infinity) f_X (x) d x = 1 - F_X (g^(-1)(y)). $
 
 *Teorema 2.1.3*\
-#kw[Función de distribución acumulada de una transformación].
+#kw[Función de distribución acumulada de una transformación].\
 Sea $X$ una variable aleatoria con fda $F_X (x)$, sea $Y = g(X)$, y sean $cal(X)$ e $cal(Y)$ definidos como $cal(X) = \{x : f_X (x) > 0\} " e " cal(Y) = \{y : y = g(x) "para algún" x in cal(X)\}.$.
 
 + Si $g$ es una función creciente en $cal(X)$, $F_Y (y) = F_X (g^(-1)(y))$ para $y in cal(Y)$.
@@ -75,9 +75,8 @@ Sea $X$ una variable aleatoria con fda $F_X (x)$, sea $Y = g(X)$, y sean $cal(X)
 + Si $g$ es una función decreciente en $cal(X)$ y $X$ es una variable aleatoria continua, $F_Y (y) = 1 - F_X (g^(-1)(y))$ para $y in cal(Y)$.
 
 *Teorema 2.1.5*\
-#kw[Función de densidad de probabilidad de una transformación].
-
-Sea $X$ una variable aleatoria con fdp $f_X (x)$ y sea $Y = g(X)$, donde $g$ es una función monótona. Sean $cal(X)$ y $cal(Y)$ definidos como en el Teorema 2.1.3. Supongamos que $f_X (x)$ es continua en $cal(X)$ y que $g^(-1)(y)$ tiene derivada continua en $cal(Y)$. Entonces la fdp de $Y$ está dada por:
+#kw[Función de densidad de probabilidad de una transformación].\
+Sea $X$ una variable aleatoria con fdp $f_X (x)$ y sea $Y = g(X)$, donde $g$ es una función monótona (función que no cambia de sentido de variación (siempre crece o siempre decrece) a lo largo de todo el conjunto $cal(X)$ donde la variable aleatoria $X$ toma valores). Sean $cal(X)$ y $cal(Y)$ definidos como en el teorema 2.1.3. Supongamos que $f_X (x)$ es continua en $cal(X)$ y que $g^(-1)(y)$ tiene derivada continua en $cal(Y)$. Entonces la fdp de $Y$ está dada por:
 
 $ f_Y (y) = cases(
   f_X (g^(-1)(y)) |d/(d y) g^(-1)(y)| &"  " y in cal(Y)\,, 
@@ -85,11 +84,11 @@ $ f_Y (y) = cases(
 ) $
 
 *Teorema 2.1.10*\
-#kw[Transformación integral de probabilidad].
-
+#kw[Transformación integral de probabilidad].\
 Tenga $X$ una fda continua $F_X (x)$ y definimos la variable aleatoria $Y$ como $Y = F_X (X)$. Entonces $Y$ esta uniformemente distribuida en $(0, 1)$, o sea, $P(Y <= y) = y ", " 0 < y < 1$.
 
-*Demo de Teorema 2.1.10:* Para $Y = F_X (X)$ tenemos que, para $0 < y < 1$,
+*Demo:*\
+Para $Y = F_X (X)$ tenemos que, para $0 < y < 1$,
 
 $ P(Y <= y) &= P(F_X (X) <= y) \
             &= P(F_X^(-1)[F_X (X)] <= F_X^(-1)(y)) &quad &(F_X^(-1) "es creciente") \

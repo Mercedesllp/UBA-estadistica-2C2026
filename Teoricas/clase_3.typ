@@ -51,7 +51,7 @@ $
 $
 
 *Ecuación 1.6.1*\
-Relación entre fdp y fda (variable discreta)
+Relación entre fpp y fda (variable discreta)
 $
   F_X (x) = sum_(i=1)^x f_X (i)
 $
@@ -87,17 +87,23 @@ $
   )
 $
 
-dado que la integral o suma exista. Si $E[g(X)] = infinity$, decimos que $E[g(X)]$ no existe.
+dado que la integral o suma exista. Si $E[g(X)] = infinity$, decimos que $E[g(X)]$ no existe.\
+Es el resultado promedio teórico que esperarías obtener si repitieras un experimento aleatorio un número infinito de veces. Representa el punto de equilibrio de la distribución de probabilidad.
 
 Valor esperado de la variable: #kw[valor medio].
 $
   g(X) = X
 $
 
+Es el promedio aritmético calculado a partir de un conjunto de datos observados (una muestra o una población real). Por la Ley de los Grandes Números, a medida que aumentas el tamaño de la muestra, el valor medio se acerca a la esperanza.
+
 Valor esperado de las distancias cuadráticas con respecto al valor medio: #kw[varianza].
 $
   "Var"(X) = E[(X - E(X))^2]
 $
+
+Es una medida de la dispersión o variabilidad de los datos respecto a su media o esperanza. A menudo se calcula su raíz cuadrada, conocida como #kw[desviación estándar], para devolver la medida a la unidad original.
+
 
 *Teorema 2.2.5*\ 
 Sea $X$ una variable aleatoria y sean $a, b$ y $c$ constantes. Entonces para funciones cualesquiera $g_1(x)$ y $g_2(x)$ donde sus esperanzas existen, se cumple que
