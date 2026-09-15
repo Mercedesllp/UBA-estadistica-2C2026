@@ -93,7 +93,7 @@ Sean $x_1, ..., x_n$ números cualesquiera y $macron(x) = (x_1 + ... + x_n) / n$
 
 + Si buscas un número $a$ que represente a un conjunto de datos minimizando el error cuadrático total (la suma de las distancias al cuadrado de cada dato a ese valor $a$), el mejor valor posible $a$ es la media aritmética $macron(x)$.
 
-+ Esta igualdad proporciona una fórmula computacional rápida (conocida como el teorema de la suma de cuadrados). Permite calcular la suma de desviaciones cuadráticas sin necesidad de restar la media $\bar{x}$ a cada dato individualmente uno por uno.
++ Esta igualdad proporciona una fórmula computacional rápida (conocida como el teorema de la suma de cuadrados). Permite calcular la suma de desviaciones cuadráticas sin necesidad de restar la media $macron(x)$ a cada dato individualmente uno por uno.
 
 *Lema 5.2.5*\
 #kw[Esperanza y varianza de una función de una muestra aleatoria].\
