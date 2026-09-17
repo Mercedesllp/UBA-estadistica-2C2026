@@ -16,7 +16,7 @@ Sean $X_1, ..., X_n$ una muestra aleatoria de una distribución $N(mu, sigma^2)$
 
 + $(n - 1) S^2 / sigma^2$ tiene una distribución chi-cuadrada ($cal(X)^2$) con $n - 1$ grados de libertad.
 
-#kw[Distribución chi-cuadrada ($cal(X)^2$):]
+#kw[Distribución chi-cuadrada ($cal(X)^2$):]\
 $X tilde cal(X)^2$ si $f(x|p) = frac(1, Gamma (p/2) 2^(p/2)) x^(p/2 - 1) e^(-x/2)$ con $0 < x < infinity$ $p =$ "grados de libertad".
 
 *Definición 5.5.1*\
@@ -80,7 +80,7 @@ $ L(Theta_1, dots, Theta_k | X_a, dots, X_n) = product_(i =1)^n f(X_i | Theta_1,
 
 *Definición 7.2.4*\
 #kw[Estimador de máxima verosimilitud].\
-Dada la muestra busco los $Theta_1, dots, Theta_k$ tal que $L(Theta_1, dots, Theta_k | X_a, dots, X_n)$ es máxima. Busco $hat(Theta)(X_i)$ tal que $L(Theta, X_1, dots, X_n)$ es máxima.x
+Dada la muestra busco los $Theta_1, dots, Theta_k$ tal que $L(Theta_1, dots, Theta_k | X_a, dots, X_n)$ es máxima. Busco $hat(Theta)(X_i)$ tal que $L(Theta, X_1, dots, X_n)$ es máxima.
 
 *Definición 7.3.1*\
 #kw[Error cuadrático medio de un estimador].\
@@ -91,7 +91,7 @@ $ E_theta [(W - theta)^2] = "Var"_theta (W) + (E_theta [W] - theta)^2 = "Var"_th
 #note Métrica principal en estadística para evaluar la calidad o precisión general de un estimador. Responde a la pregunta: "En promedio, ¿qué tan lejos cae mi estimación respecto al verdadero valor del parámetro $theta$?". El sesgo mide qué tan desviado está el valor esperado del estimador respecto al parámetro objetivo $theta$.
 
 *Definición 7.3.2*\
-El #kw[sesgo de un estimador] puntual $W$, de un parámetro $theta$, es la diferencia entre el valor esperado de $W$ y $theta$. Es decir, $"Sesgo"_theta (W) = E_theta [W] - theta$. Un estimador cuyo sesgo es idénticamente (en $theta$) igual a cero se llama insesgado y satisface $E_theta [W] = theta$ para todo $theta$.
+El #kw[sesgo de un estimador] puntual $W$, de un parámetro $theta$, es la diferencia entre el valor esperado de $W$ y $theta$. Es decir, $"Sesgo"_theta (W) = E_theta [W] - theta$. Un estimador cuyo sesgo es idénticamente (en $theta$) igual a cero se llama #kw[insesgado] y satisface $E_theta [W] = theta$ para todo $theta$.
 
 Para un estimador insesgado tenemos
 
