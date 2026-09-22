@@ -7,34 +7,30 @@
 *Definición 4.5.1 y 4.5.2*\
 La #kw[covarianza] de $X$ e $Y$ es el número definido por
 
-$ "Cov"(X,Y) = E((X - mu_X)(Y - mu_Y)) $
+$ "Cov"(X,Y) = E[(X - mu_X)(Y - mu_Y)] $
 
 La #kw[correlación] de $X$ e $Y$ es el número definido por
 
 $ rho_(X Y) = frac("Cov"(X,Y), sigma_X sigma_Y) $
 
+Posdata:
+
+- $mu_X$ y $mu_Y$ son las $E[X]$ y $E[Y]$ respectivamente.
+
+- $sigma_X^2 = sqrt("Var"(X)) = sqrt(E[X^2] - mu_X^2)$ y $sigma_Y^2 = sqrt("Var"(Y)) = sqrt(E[Y^2] - mu_Y^2)$.
+
+
 #note
 
 - *Covarianza:* Mide la variación conjunta de dos variables respecto a sus respectivas medias ($mu_X$ y $mu_Y$). Responde a la pregunta: "Cuando $X$ está por encima de su promedio, ¿$Y$ tiende a estar por encima o por debajo del suyo?".
 
-- *Correlación:* Es la covarianza estandarizada (o adimensional). Se obtiene dividiendo la covarianza por el producto de las desviaciones estándar ($sigma_X sigma_Y$).
+- *Correlación:* Es la covarianza estandarizada (o adimensional). Se obtiene dividiendo la covarianza por el producto de las #kw[desviaciones estándar] ($sigma_X sigma_Y$).
 
 *Teorema 4.5.3*\
 #kw[Descomposición de la covarianza]. \
 Para cualesquiera variables aleatorias $X$ e $Y$.
 
 $ "Cov"(X, Y) = E[X Y] - mu_X mu_Y. $
-
-*Demo:*
-
-$
-"Cov"(X, Y)
-  &= E((X - mu_X)(Y - mu_Y)) \
-  &= E((X Y - mu_X Y - mu_Y X + mu_X mu_Y)) && "(expandiendo el producto)" \
-  &= E [X Y] - mu_X E [Y] - mu_Y E [X] + mu_X mu_Y && "(mu_X y mu_Y son constantes)" \
-  &= E [X Y] - mu_X mu_Y - mu_Y mu_X + mu_X mu_Y \
-  &= E [X Y] - mu_X mu_Y.
-$
 
 *Teorema 4.5.5*\
 #kw[Covarianza y correlación de variables independientes].\
@@ -97,7 +93,7 @@ Sean $x_1, ..., x_n$ números cualesquiera y $macron(x) = (x_1 + ... + x_n) / n$
 
 *Lema 5.2.5*\
 #kw[Esperanza y varianza de una función de una muestra aleatoria].\
-Sean $X_1, ..., X_n$ una muestra aleatoria de una población y sea $g(x)$ una función tal que $E[ g(X_1)]$ y Var $(g(X_1))$ existen. Entonces
+Sean $X_1, ..., X_n$ una muestra aleatoria de una población y sea $g(x)$ una función tal que $E[ g(X_1)]$ y Var$(g(X_1))$ existen. Entonces
 
 $ E(sum_(i=1)^n g(X_i)) = n (E[g(X_1)]) $
 

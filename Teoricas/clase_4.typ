@@ -90,6 +90,8 @@ $"Var"(X) = m frac(r,N) frac(N-r, N) frac(N-m, N-1)$
 
 == Familias comunes de distribuciones continuas
 
+A partir de aca está mal hablar de $P(X=x)$ ya que es una distribución continua y se mide la probabilidad con el área de su curva, por lo que esto es lo mismo que decir $0$.
+
 *Ecuación 3.3.1*\
 #kw[Distribución uniforme continua].
 
@@ -145,11 +147,12 @@ Relación con la función gamma
 $B(a, b) =frac(Gamma(a) Gamma(b), Gamma(a+b))$
 
 *Ecuación 3.3.11*\
-#kw[Distribución exponencial].
+#kw[Distribución exponencial].\
+La distribución exponencial es una distribución de probabilidad continua que modela el tiempo que transcurre hasta que ocurre un determinado evento. $lambda$ es la tasa de ocurrencia de eventos en un intervalo de tiempo. 
 
 $X tilde "Exp"(lambda)$
 
-$f_X (x) = lambda e^(-lambda x) bb(1)_((0,infinity)) (x) ",  " lambda > 0$
+$f_X (x) = e^(-lambda x) bb(1)_((0,infinity)) (x) ",  " lambda > 0$
 
 $E[X] = 1/lambda$
 
