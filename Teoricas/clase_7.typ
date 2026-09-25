@@ -40,11 +40,11 @@ $ "Cov"(X, Y) = E[X Y] - mu_X mu_Y. $
 #kw[Varianza de una suma de variables aleatorias]. \
 Si $X$ e $Y$ son dos variables aleatorias cualesquiera, y $a$ y $b$ son dos constantes cualesquiera, entonces
 
-$ "Var"(a X + b Y) = a^2 "Var" X + b^2 "Var" Y + 2 a b "Cov"(X, Y). $
+$ "Var"(a X + b Y) = a^2 "Var"(X) + b^2 "Var"(Y) + 2 a b "Cov"(X, Y). $
 
 Si $X$ e $Y$ son variables aleatorias independientes, entonces
 
-$ "Var"(a X + b Y) = a^2 "Var" X + b^2 "Var" Y. $
+$ "Var"(a X + b Y) = a^2 "Var"(X) + b^2 "Var"(Y). $
 
 *Teorema 4.5.7*\
 #kw[Correlación y relación lineal].\
