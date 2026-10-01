@@ -120,4 +120,4 @@ $L$ depende del nivel de confianza, la varianza muestral y el tamaño de la mues
 
 ¿Qué tamaño de muestra necesito para asegurar un dado tamaño del intervalo de confianza?
 
-$L = 2 z_(alpha / 2) frac(sigma_0, sqrt(n)) <= L_0 <=> sqrt(n) >= frac(2z_(alpha / 2) sigma_0, L_0) <=> n >= (frac(2z_(alpha / 2) sigma_0, L_0))^2 $
+$L = 2 z_(alpha / 2) frac(sigma_0, sqrt(n)) <= L_0 <=> sqrt(n) >= frac(2z_(alpha / 2) sigma_0, L_0) <=> n >= (frac(2z_(alpha / 2) sigma_0, L_0))^2$
