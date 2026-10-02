@@ -4,6 +4,8 @@
 = Clase 9. Intervalos de confianza.
 (referencias al pdf - varios puntos de bibliografía)
 
+#note  Un intervalo de confianza sirve para responder a una pregunta fundamental en estadística: ¿Cómo puedo estimar un valor real de toda una población si solo tengo una muestra de datos?
+
 == Distribuciones continuas fundamentales para la inferencia
 
 Teniendo a $Z tilde N(0,1)$ y construimos $X = sum_(i=1)^k Z_i^2$, entonces $X = cal(X)^2$
@@ -36,21 +38,21 @@ $T tilde "Student" (k)$
 
 == Intervalos de confianza
 
-Si $X tilde N(mu, sigma ^2)$ (normal) y construimos $Z = frac(X - mu, sigma)$, entonces $Z tilde N(0,1)$ (normal estándar).
+// Si $X tilde N(mu, sigma ^2)$ (normal) y construimos $Z = frac(X - mu, sigma)$, entonces $Z tilde N(0,1)$ (normal estándar).
 
-Puedo calcular la probabilidad de que $Z$ (o también $X$) esté en un cierto intervalo:
+// Puedo calcular la probabilidad de que $Z$ (o también $X$) esté en un cierto intervalo:
 
-$P(-1,96 <= Z <= 1,96) = 0,95$
+// $P(-1,96 <= Z <= 1,96) = 0,95$
 
-$P(-1,96 <= frac(X - mu, sigma) <= 1,96) = 0,95$
+// $P(-1,96 <= frac(X - mu, sigma) <= 1,96) = 0,95$
 
-$P( mu -1,96 sigma <= X <= mu + 1,96 sigma) = 0,95$
+// $P( mu -1,96 sigma <= X <= mu + 1,96 sigma) = 0,95$
 
-Sirve para pensarlo al revés: dado un valor $X_1$, este intervalo tiene una probabilidad del $95%$ de incluir al valor medio ($mu$) de la distribución subyacente:
+// Sirve para pensarlo al revés: dado un valor $X_1$, este intervalo tiene una probabilidad del $95%$ de incluir al valor medio ($mu$) de la distribución subyacente:
 
-$P(X_1 -1,96 sigma <= mu <= X_1 + 1,96 sigma) = 0,95$
+// $P(X_1 -1,96 sigma <= mu <= X_1 + 1,96 sigma) = 0,95$
 
-#line(length: 100%) // Tengo que ver como separar esto mejor
+// #line(length: 100%, stroke: tol-bright.grey) 
 
 Si $X_1, dots, X_n tilde N(mu, sigma ^2)$ (muestra de distribución normal), entonces la media muestral $macron(X) = tilde N(mu, sigma ^2 / n)$ y construimos $U = frac(macron(X) - mu, sigma/sqrt(n))$, entonces $U tilde N(0,1)$ (normal estándar).
 
@@ -97,7 +99,7 @@ $P(a <= T(X_1 dots X_n ,theta)<= b) = 1−alpha$
 a partir de lo cual se puede obtener un intervalo de confianza de nivel $1-alpha$ para $theta$
 La función $T(X_1 dots X_n, theta)$ se denomina #kw[“pivote”].
 
-== Intervalos de confianza asintóticos
+#kw[Intervalos de confianza asintóticos]
 
 Sea $X_1 dots X_n$ una muestra aleatoria de una distribución desconocida con $E(X)=mu$ y $"Var"(X)=sigma^2$. Buscamos un intervalo de confianza para $mu$. Sabemos que la media muestral estima bien $mu$, pero no conocemos qué distribución tiene la media muestral. Sin embargo sabemos que
 
@@ -105,12 +107,10 @@ $sqrt(n) frac(macron(X) - mu, sigma) stretch(->)^d N(0,1)$
 
 Usemos $S^2$ para estimar $sigma^2$:
 
-$
-  sqrt(n) (overline(X) - mu) / sigma limits(-->)^d N(0, 1) \
-  sigma / S limits(-->)^P 1
-$ $=> sqrt(n) (overline(X) - mu) / S --> N(0, 1)$
+$sqrt(n) (overline(X) - mu) / sigma limits(-->)^d N(0, 1) \
+  sigma / S limits(-->)^P 1$ $=> sqrt(n) (overline(X) - mu) / S --> N(0, 1)$
 
-== Determinación del tamaño de una muestra
+#kw[Determinación del tamaño de una muestra]
 
 Tomemos una ditribución normal con $sigma^2$ conocida para ejemplificar. El largo del intervalo de confianza para el parámetro $mu$ es
 
