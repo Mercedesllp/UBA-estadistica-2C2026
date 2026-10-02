@@ -114,10 +114,10 @@ $ $=> sqrt(n) (overline(X) - mu) / S --> N(0, 1)$
 
 Tomemos una ditribución normal con $sigma^2$ conocida para ejemplificar. El largo del intervalo de confianza para el parámetro $mu$ es
 
-$ L = 2 z_(alpha / 2) frac(sigma_0, sqrt(n)) $
+$ L = 2 z_(alpha \/ 2) frac(sigma_0, sqrt(n)) $
 
 $L$ depende del nivel de confianza, la varianza muestral y el tamaño de la muestra
 
 ¿Qué tamaño de muestra necesito para asegurar un dado tamaño del intervalo de confianza?
 
-$L = 2 z_(alpha / 2) frac(sigma_0, sqrt(n)) <= L_0 <=> sqrt(n) >= frac(2z_(alpha / 2) sigma_0, L_0) <=> n >= (frac(2z_(alpha / 2) sigma_0, L_0))^2$
+$L = 2 z_(alpha \/ 2) frac(sigma_0, sqrt(n)) <= L_0 <=> sqrt(n) >= frac(2z_(alpha \/ 2) sigma_0, L_0) <=> n >= (frac(2z_(alpha \/ 2) sigma_0, L_0))^2$
