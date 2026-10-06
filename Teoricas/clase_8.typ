@@ -68,7 +68,7 @@ $
   m_k &= 1/n sum_(i=1)^n X_i^k, & mu_k' &= E[X^k].
 $
 
-El momento poblacional $mu'_j $ típicamente será una función de $theta_1, ..., theta_k$, digamos $mu'_j(theta_1, ..., theta_k)$. El estimador del método de los momentos $(tilde(theta)_1, ..., tilde(theta)_k)$ de $(theta_1, ..., theta_k)$ se obtiene resolviendo el siguiente sistema de ecuaciones para $(theta_1, ..., theta_k)$ en términos de $(m_1, ..., m_k)$:
+El momento poblacional $mu'_j $ típicamente será una función de $theta_1, ..., theta_k$, digamos $mu'_j(theta_1, ..., theta_k)$. El #kw[estimador del método de los momentos (EMM)] $(tilde(theta)_1, ..., tilde(theta)_k)$ de $(theta_1, ..., theta_k)$ se obtiene resolviendo el siguiente sistema de ecuaciones para $(theta_1, ..., theta_k)$ en términos de $(m_1, ..., m_k)$:
 
 $
   m_1 &= mu'_1(theta_1, ..., theta_k), \

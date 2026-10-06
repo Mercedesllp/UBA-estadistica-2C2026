@@ -5,19 +5,24 @@
 (referencias a Casella Berger 2024)
  
 *Teorema 3.6.1*\
-#kw[Desigualdad de Markov / Chebychev].\
+#kw[Desigualdad de Markov].\
 Sea $X$ una variable aleatoria y $g(X) >= 0$. Entonces, para cualquier $r>0$:
 
 $ P(g(X) >= r) <= frac(E[g(X)], r) $
 
-*Demo:*\
+// *Demo:*\
 
-$ E[g(X)] &= integral_(-infinity)^(infinity) g(x) f_X (x) d x\ 
-         &>= integral_(\{x : g(x) >= r\}) g(x) f_X (x) d x &quad &(g "es no negativa") \
-         &>= r integral_(\{x : g(x) >= r\}) f_X (x) d x \
-         &= r P(g(X) >= r). &quad &("definición") $
+// $ E[g(X)] &= integral_(-infinity)^(infinity) g(x) f_X (x) d x\ 
+//          &>= integral_(\{x : g(x) >= r\}) g(x) f_X (x) d x &quad &(g "es no negativa") \
+//          &>= r integral_(\{x : g(x) >= r\}) f_X (x) d x \
+//          &= r P(g(X) >= r). &quad &("definición") $
 
-Reacomodando ahora da la inecuación deseada.
+// Reacomodando ahora da la inecuación deseada.
+
+#kw[Desigualdad de Chevyshev]\
+
+$ P(|Y - E[Y]| >= k) <= frac("Var"(Y), k^2) $
+
 
 == Distribuciones conjuntas
 

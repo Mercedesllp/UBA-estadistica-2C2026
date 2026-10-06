@@ -152,7 +152,7 @@ La distribución exponencial es una distribución de probabilidad continua que m
 
 $X tilde "Exp"(lambda)$
 
-$f_X (x) = e^(-lambda x) bb(1)_((0,infinity)) (x) ",  " lambda > 0$
+$f_X (x) = lambda e^(-lambda x) bb(1)_((0,infinity)) (x) ",  " lambda > 0$
 
 $E[X] = 1/lambda$
 
