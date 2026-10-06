@@ -54,19 +54,38 @@ es decir, $sqrt(n) (macron(X)_n - mu) / sigma$ tiene una distribución normal es
 == Estimación puntual
 
 *Definición 7.1.1*\
-Un #kw[estimador puntual] es cualquier función $W(X_1, dots, X_n)$ de una muestra. O sea, cualquier estadística es un punto estimador.
+Un #kw[estimador puntual] es cualquier función $W(X_1, dots, X_n)$ de una muestra. O sea, cualquier estadístico es un punto estimador.
 
 *Sección 7.2.1*\
 #kw[Método de los momentos para la normal / encontrar estimadores].\
-Supóngase que $X_1, ..., X_n$ son i.i.d. $N(theta, sigma^2)$. En la notación precedente, $theta_1 = theta$ y $theta_2 = sigma^2$. Tenemos $m_1 = macron(X)$, $m_2 = (1/n) sum X_i^2$, $mu'_1 = theta$, $mu'_2 = theta^2 + sigma^2$, y por lo tanto debemos resolver
 
-$ macron(X) = theta, \ 1/n sum X_i^2 = theta^2 + sigma^2. $
+Sean $X_1, ..., X_n$ una muestra de una población con fdp o fpm $f(x | theta_1, ..., theta_k)$. Los estimadores del método de los momentos se obtienen igualando los primeros $k$ momentos muestrales a los correspondientes $k$ momentos poblacionales, y resolviendo el sistema de ecuaciones simultáneas resultante. Más precisamente, se define:
 
-Resolver para $theta$ y $sigma^2$ produce los estimadores del método de los momentos
+$
+  m_1 &= 1/n sum_(i=1)^n X_i^1, & mu_1' &= E[X^1] \
+  m_2 &= 1/n sum_(i=1)^n X_i^2, & mu_2' &= E[X^2] \
+      & #v(0.5em) dots.v #v(0.5em) \
+  m_k &= 1/n sum_(i=1)^n X_i^k, & mu_k' &= E[X^k].
+$
 
-$ tilde(theta) = macron(X)  " , y  "  tilde(sigma)^2 = 1/n sum X_i^2 - macron(X)^2 = 1/n sum (X_i - macron(X))^2. $
+El momento poblacional $mu'_j $ típicamente será una función de $theta_1, ..., theta_k$, digamos $mu'_j(theta_1, ..., theta_k)$. El estimador del método de los momentos $(tilde(theta)_1, ..., tilde(theta)_k)$ de $(theta_1, ..., theta_k)$ se obtiene resolviendo el siguiente sistema de ecuaciones para $(theta_1, ..., theta_k)$ en términos de $(m_1, ..., m_k)$:
 
-En este ejemplo simple, la solución del método de los momentos coincide con nuestra intuición, y tal vez le otorga cierta credibilidad a ambas. El método es algo más útil, sin embargo, cuando no se sugiere un estimador obvio.
+$
+  m_1 &= mu'_1(theta_1, ..., theta_k), \
+  m_2 &= mu'_2(theta_1, ..., theta_k), \
+      & #v(0.5em) dots.v #v(0.5em) \
+  m_k &= mu'_k(theta_1, ..., theta_k).
+$ 
+
+// Supóngase que $X_1, ..., X_n$ son i.i.d. $N(theta, sigma^2)$. En la notación precedente, $theta_1 = theta$ y $theta_2 = sigma^2$. Tenemos $m_1 = macron(X)$, $m_2 = (1/n) sum X_i^2$, $mu'_1 = theta$, $mu'_2 = theta^2 + sigma^2$, y por lo tanto debemos resolver
+
+// $ macron(X) = theta, \ 1/n sum X_i^2 = theta^2 + sigma^2. $
+
+// Resolver para $theta$ y $sigma^2$ produce los estimadores del método de los momentos
+
+// $ tilde(theta) = macron(X)  " , y  "  tilde(sigma)^2 = 1/n sum X_i^2 - macron(X)^2 = 1/n sum (X_i - macron(X))^2. $
+
+// En este ejemplo simple, la solución del método de los momentos coincide con nuestra intuición, y tal vez le otorga cierta credibilidad a ambas. El método es algo más útil, sin embargo, cuando no se sugiere un estimador obvio.
 
 #note El Método de los Momentos (MM) es una técnica para encontrar estimadores de los parámetros desconocidos de una población. Su idea central es muy directa: igualar los momentos teóricos (poblacionales) con los momentos muestrales (calculados con los datos) y resolver el sistema de ecuaciones resultante.
 
