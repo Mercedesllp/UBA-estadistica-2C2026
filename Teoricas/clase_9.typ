@@ -8,11 +8,11 @@
 
 == Distribuciones continuas fundamentales para la inferencia
 
-Teniendo a $Z tilde N(0,1)$ y construimos $X = sum_(i=1)^k Z_i^2$, entonces $X = cal(X)^2$
+Teniendo a $Z tilde N(0,1)$ y construimos $X = sum_(i=1)^k Z_i^2$, entonces $X = chi^2$
 
-#kw[Distribución Chi-Cuadrado $(cal(X)^2)$]
+#kw[Distribución Chi-Cuadrado $(chi^2)$]
 
-$X tilde cal(X)^2_n$
+$X tilde chi^2_n$
 
 $f(x) = frac(1, 2^(k/2) Gamma(k/2)) x^((k/2) - 1) e^(-x/2)$ con $k$ "grados de libertad" y $Gamma$ es la función gamma.
 
@@ -26,6 +26,10 @@ $f(t) = frac(Gamma(frac(nu + 1,2)), sqrt(pi nu) Gamma(nu/2) )$ con $nu$ "grados 
 
 $E[T] = 0 " si " nu > 1$ (indefinido en otro caso pues Cauchy)
 $"Var"(T) = nu /(nu-2) " si " nu > 2$ (indefinida o infinita en otro caso)
+
+#note Los "grados de libertad" son:\
+En $chi^2$: Representa cuántas normales $Z^2$ independientes se sumaron.En $t$ de Student: Representa la precisión con la que se estimó la variabilidad muestral; a mayor número de grados de libertad, más se parece a la distribución Normal $N(0,1)$.
+
 
 === Propiedades
 A medida de que la $nu$ de la distribución de Cauchy tiende al infinito, esta tiende a una distribución Normal.
@@ -101,8 +105,15 @@ $ "IC"_(1-alpha)(sigma^2) = [frac((n-1) S^2, cal(X)_(n-1, alpha/2)^2), #h(0.5em)
 #align(center)[
   #table(
     columns: (auto, auto, auto, auto, auto),
-    inset: 6pt,
+    inset: 5pt,
     align: horizon,
+    stroke: (x, y) => (
+      bottom: 0.5pt + black,
+      top: 0.5pt + black,
+      left: 0.5pt + black,
+      right: if x == 4 { 0.5pt + black } else { none }, // Cierra la línea vertical en la última columna
+    ),
+
     [*Parámetro*], [*Condición*], [*Pivote*], [*Distribución*], [*Intervalo de Confianza (IC)*],
     [$mu$], [$sigma^2$ conocida], [$frac(macron(X) - mu, sigma / sqrt(n))$], [$N(0, 1)$], [$macron(X) \pm z_(alpha/2) frac(sigma, sqrt(n))$],
     [$mu$], [$sigma^2$ desconocida], [$frac(macron(X) - mu, S / sqrt(n))$], [$t_(n-1)$], [$macron(X) \pm t_(n-1, alpha/2) frac(S, sqrt(n))$],
