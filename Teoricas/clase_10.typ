@@ -144,3 +144,39 @@ $ P("Al menos 1 FP") = 1 - (1 - alpha)^N $
 - *Efecto Trivial:* Una diferencia tan pequeña que no tiene relevancia práctica o de negocio (ej. mejorar $0.001$ ms).
 - *Efecto Relevante:* Un intervalo de confianza que cae fuera de la banda de trivialidad (ej. $(-10, 10)$).
 - *Cuidado con el $n$ gigante:* Un tamaño muestral $n -> infinity$ vuelve significativo ($p "-valor" < alpha$) a cualquier efecto, incluso si es trivial. Siempre debe analizarse el *intervalo de confianza* junto al p-valor.
+
+
+== 10. 
+
+La lógica matemática consiste en forzar a que la barrera crítica $hat(p)_c$ cumpla dos condiciones simultáneamente:
+
+1. Bajo $H_0$ ($p = p_0$), debe dejar un área de $alpha$ en la cola correspondiente.
+2. Bajo $H_1$ ($p = p_1$), debe dejar un área de $1 - beta$ (potencia del test) a su izquierda.
+
+=== 1. Identificar los valores $Z$ de la tabla Normal
+
+- *Para el error de Tipo I ($alpha$):* Se busca el percentil $z_alpha$ correspondiente al nivel de significación deseado.
+- *Para la Potencia ($1 - beta$):* Se busca el percentil $z_(1-beta)$ correspondiente al nivel de potencia deseado.
+
+=== 2. Plantear las ecuaciones para la regla de decisión
+
+Expresamos la barrera crítica $hat(p)_c$ desde la perspectiva de ambas hipótesis:
+
+$
+  "Bajo" H_0: & quad hat(p)_c = p_0 - z_alpha sqrt(frac(p_0 (1 - p_0), n)) \
+  "Bajo" H_1: & quad hat(p)_c = p_1 + z_(1-beta) sqrt(frac(p_1 (1 - p_1), n))
+$
+
+=== 3. Despejar la fórmula general para el tamaño de muestra $n$
+
+Igualando ambas expresiones para $hat(p)_c$:
+
+$ p_0 - z_alpha sqrt(frac(p_0 (1 - p_0), n)) = p_1 + z_(1-beta) sqrt(frac(p_1 (1 - p_1), n)) $
+
+Reagrupando los términos que contienen $n$:
+
+$ p_0 - p_1 = frac(1, sqrt(n)) ( z_alpha sqrt(p_0 (1 - p_0)) + z_(1-beta) sqrt(p_1 (1 - p_1)) ) $
+
+Despejando $n$, se llega a la *fórmula general para el tamaño de muestra en contraste de proporciones*:
+
+$ n = ( frac(z_alpha sqrt(p_0 (1 - p_0)) + z_(1-beta) sqrt(p_1 (1 - p_1)), |p_0 - p_1|) )^2 $
