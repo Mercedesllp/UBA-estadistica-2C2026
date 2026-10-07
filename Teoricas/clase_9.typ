@@ -115,8 +115,8 @@ $ "IC"_(1-alpha)(sigma^2) = [frac((n-1) S^2, cal(X)_(n-1, alpha/2)^2), #h(0.5em)
     ),
 
     [*Parámetro*], [*Condición*], [*Pivote*], [*Distribución*], [*Intervalo de Confianza (IC)*],
-    [$mu$], [$sigma^2$ conocida], [$frac(macron(X) - mu, sigma / sqrt(n))$], [$N(0, 1)$], [$macron(X) \pm z_(alpha/2) frac(sigma, sqrt(n))$],
-    [$mu$], [$sigma^2$ desconocida], [$frac(macron(X) - mu, S / sqrt(n))$], [$t_(n-1)$], [$macron(X) \pm t_(n-1, alpha/2) frac(S, sqrt(n))$],
+    [$mu$], [$sigma^2$ conocida], [$frac(macron(X) - mu, sigma / sqrt(n))$], [$N(0, 1)$], [$macron(X) plus.minus z_(alpha/2) frac(sigma, sqrt(n))$],
+    [$mu$], [$sigma^2$ desconocida], [$frac(macron(X) - mu, S / sqrt(n))$], [$t_(n-1)$], [$macron(X) plus.minus t_(n-1, alpha/2) frac(S, sqrt(n))$],
     [$sigma^2$], [$mu$ conocida], [$frac(sum (X_i - mu)^2, sigma^2)$], [$cal(X)_n^2$], [$[frac(sum (X_i - mu)^2, cal(X)_(n, alpha/2)^2) ; frac(sum (X_i - mu)^2, cal(X)_(n, 1 - alpha/2)^2)]$],
     [$sigma^2$], [$mu$ desconocida], [$frac((n-1)S^2, sigma^2)$], [$cal(X)_(n-1)^2$], [$[frac((n-1)S^2, cal(X)_(n-1, alpha/2)^2) ; frac((n-1)S^2, cal(X)_(n-1, 1 - alpha/2)^2)]$],
   )
