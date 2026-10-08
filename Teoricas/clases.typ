@@ -16,3 +16,4 @@
 #include "tabla_normal.typ"
 #include "tabla_t_student.typ"
 #include "tabla_tests.typ"
+#include "tabla_de_ns.typ"
