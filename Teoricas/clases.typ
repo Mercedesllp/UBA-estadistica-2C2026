@@ -4,9 +4,9 @@
   number-align: center,
 )
 
-#for i in range(1, 13) {
+#for i in range(1, 17) {
   eval("#include \"clase_" + str(i) + ".typ\"", mode: "markup")
-  if i < 13 {
+  if i < 17 {
     line(length: 100%)
   }
 }
